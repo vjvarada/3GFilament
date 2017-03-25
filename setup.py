@@ -4,14 +4,14 @@
 ### Do not forget to adjust the following variables to your own plugin.
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "3GFilament"
+plugin_identifier = "Julia3GFilament"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_3GFilament"
+plugin_package = "octoprint_Julia3GFilament"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "Octoprint-3GFilament"
+plugin_name = "Octoprint-Julia3GFilament"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
 plugin_version = "0.0.1"
@@ -27,7 +27,7 @@ plugin_author = "Vijay Raghav Varada"
 plugin_author_email = "vjvarada@fracktal.in"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/kontakt/Octoprint-Filament-Reloaded"
+plugin_url = "https://github.com/vjvarada/3GFilament"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"
