@@ -187,7 +187,7 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
         except RuntimeError:
             self._logger.info("filament sensors could not be enabled")
 
-    def get_update_information(self):
+	def get_update_information(self):
 		return dict(
 			octoprint_filament=dict(
 				displayName="Filament Sensor Reloaded",
