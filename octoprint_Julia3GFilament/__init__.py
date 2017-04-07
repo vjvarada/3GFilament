@@ -82,7 +82,7 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
         )
 
     def get_template_configs(self):
-        return [dict(type="settings", custom_bindings=False)]s
+        return [dict(type="settings", custom_bindings=False)]
 
     @octoprint.plugin.BlueprintPlugin.route("/status", methods=["GET"])
     def check_pin_config(self):
