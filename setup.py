@@ -14,7 +14,7 @@ plugin_package = "octoprint_Julia3GFilament"
 plugin_name = "Octoprint-Julia3GFilament"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
-plugin_version = "0.0.3"
+plugin_version = "0.0.4"
 
 # The plugin's description. Can be overwritten within OctoPrint's internal data via __plugin_description__ in the plugin
 # module
