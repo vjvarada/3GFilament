@@ -1,0 +1,26 @@
+<h4>{{ _('Filament Sensor') }}</h4>
+Define the pin used by your sensor and the debounce timing for false positive prevention.
+<br>
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label">{{ _('minExtrudeTime:') }}</label>
+        <div class="controls" data-toggle="tooltip" title="{{ _('minimum time the extruder motor has to rotate to be considered rotating') }}">
+            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.filamentreload.minExtrudeTime">
+            <span class="add-on">ms</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('filamentRunoutTime:') }}</label>
+        <div class="controls" data-toggle="tooltip" title="{{ _('Time after filament sensor activity that the sensor is considered off') }}">
+            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.filamentreload.filamentRunoutTime">
+            <span class="add-on">ms</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('sensorCount:') }}</label>
+        <div class="controls" data-toggle="tooltip" title="{{ _('2 to enable, -1 to dissable filament sensor') }}">
+            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.filamentreload.sensorCount">
+            <span class="add-on">ms</span>
+        </div>
+    </div>
+</form>
