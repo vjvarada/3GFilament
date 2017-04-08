@@ -4,14 +4,14 @@ Tune the timings of the filament sensor to prevent false positives
 <form class="form-horizontal">
     <div class="control-group">
         <label class="control-label">{{ _('minExtrudeTime:') }}</label>
-        <div class="controls" data-toggle="tooltip" title="{{ _('minimum time the extruder motor has to rotate to be considered rotating') }}">
+        <div class="controls" data-toggle="tooltip" title="{{ _('minimum time the extruder motor has to extrude to be considered extruding logically. This variable will account for the lag between staring extrude, and filament encoder moving') }}">
             <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.Julia3GFilament.minExtrudeTime">
             <span class="add-on">ms</span>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label">{{ _('filamentRunoutTime:') }}</label>
-        <div class="controls" data-toggle="tooltip" title="{{ _('Time after filament sensor activity that the sensor is considered off') }}">
+        <div class="controls" data-toggle="tooltip" title="{{ _('Time after filament sensor activity that the sensor is considered off. If the filament encoder has no activity for this amount of time, it will be considered triggered') }}">
             <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.Julia3GFilament.filamentRunoutTime">
             <span class="add-on">ms</span>
         </div>
