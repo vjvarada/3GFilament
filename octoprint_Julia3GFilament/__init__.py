@@ -201,7 +201,7 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
 
 	def get_update_information(self):
 		return dict(
-			octoprint_filament=dict(
+			octoprint_Julia3GFilament=dict(
 				displayName="Filament Sensor Reloaded",
 				displayVersion=self._plugin_version,
 
@@ -215,6 +215,17 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
 				pip="https://github.com/vjvarada/3GFilament/archive/{target_version}.zip"
 			)
 		)
+
+
+	def on_settings_save(self, data):
+		octoprint.plugin.SettingsPlugin.on_settings_save(self, data)
+		self.motorExtrusion.minExtrudeTime = int(self._settings.get(["minExtrudeTime"]))
+		self.sensor0.filamentRunoutTime = int(self._settings.get(["filamentRunoutTime"]))
+		self.sensor1.filamentRunoutTime = int(self._settings.get(["filamentRunoutTime"]))
+		self.sensorCount = int(self._settings.get(["sensorCount"]))
+		self._logger.info("Filament Sensor: New Settings Injected")
+
+
 
 class motorExtrusion(object):
 	def __init__(self, extrudePin, minExtrudeTime, bounce):
@@ -286,7 +297,7 @@ class filamentSensor(object):
 
 
 __plugin_name__ = "Julia3GFilament"
-__plugin_version__ = "0.0.4"
+__plugin_version__ = "0.0.6"
 
 
 def __plugin_load__():
