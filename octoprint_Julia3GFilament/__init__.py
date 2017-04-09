@@ -202,7 +202,7 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
 	def get_update_information(self):
 		return dict(
 			octoprint_Julia3GFilament=dict(
-				displayName="Filament Sensor Reloaded",
+				displayName="Octoprint-Julia3GFilament",
 				displayVersion=self._plugin_version,
 
 				# version check: github repository
