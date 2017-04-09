@@ -303,7 +303,7 @@ class filamentSensor(object):
 
 
 __plugin_name__ = "Julia3GFilament"
-__plugin_version__ = "0.0.6"
+__plugin_version__ = "0.0.7"
 
 
 def __plugin_load__():
