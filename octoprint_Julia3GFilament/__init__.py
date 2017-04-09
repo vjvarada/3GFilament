@@ -225,6 +225,12 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
 		self.sensorCount = int(self._settings.get(["sensorCount"]))
 		self._logger.info("Filament Sensor: New Settings Injected")
 
+		if self._printer.is_printing() or self._printer.is_paused():
+			if self.sensorCount == -1:
+				self.dissableFilamentSensing()
+			elif self.sensorCount == 2:
+				self.enableFilamentSensing()
+
 
 
 class motorExtrusion(object):
