@@ -152,6 +152,8 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
 		# self._logger.info("Detected sensor [%s]" % sensorNumber)
 		# print ("Detected sensor [%s]" % sensorNumber)
 		if self._printer.is_printing():
+			self._send_status(status_type="Filament Status", status_value="error",
+							  status_description="Error with filament, please check and resume print")
 			self.sendMessage('Filament_Sensor_Triggered', {'sensor': 'ActiveSensor'})
 			self.dissableFilamentSensing()
 			self._printer.toggle_pause_print()
