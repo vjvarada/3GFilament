@@ -210,12 +210,12 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
 
 				# version check: github repository
 				type="github_release",
-				user="vjvarada",
+				user="FracktalWorks",
 				repo="3GFilament",
 				current=self._plugin_version,
 
 				# update method: pip
-				pip="https://github.com/vjvarada/3GFilament/archive/{target_version}.zip"
+				pip="https://github.com/FracktalWorks/3GFilament/archive/{target_version}.zip"
 			)
 		)
 
