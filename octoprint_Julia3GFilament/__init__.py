@@ -107,6 +107,7 @@ class Julia3GFilament(octoprint.plugin.StartupPlugin,
         :return: response  dict of the pin configuration
         '''
 		self.sendMessage('Filament_Sensor_Triggered', {'sensor': 'ActiveSensor'})
+		self._send_status(status_type="Filament Status", status_value="error", status_description="Error with filament, please check and resume print")
 		return jsonify(status='Message Sent')
 
 	@octoprint.plugin.BlueprintPlugin.route("/enable", methods=["POST"])
@@ -303,7 +304,7 @@ class filamentSensor(object):
 
 
 __plugin_name__ = "Julia3GFilament"
-__plugin_version__ = "0.0.9"
+__plugin_version__ = "0.1.0"
 
 
 def __plugin_load__():
