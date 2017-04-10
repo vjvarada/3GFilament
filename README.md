@@ -9,5 +9,5 @@ built with Fracktal Works Julia 3G in mind
 Install via the bundled [Plugin Manager](https://github.com/foosel/OctoPrint/wiki/Plugin:-Plugin-Manager)
 or manually using this URL:
 
-    https://github.com/vjvarada/3GFilament/archive/master.zip
+    https://github.com/FracktalWorks/3GFilament/archive/master.zip
 
